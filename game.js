@@ -111,9 +111,15 @@ function draw() {
     ctx.font = "30px Arial";
     ctx.fillText("GAME OVER", width / 2 - 90, height / 2);
     ctx.font = "20px Arial";
-    ctx.fillText("Tekan ENTER untuk main lagi", width / 2 - 120, height / 2 + 30);
+    ctx.fillText("Tekan ENTER atau klik tombol", width / 2 - 120, height / 2 + 30);
+  
+    // Tampilkan tombol restart
+    document.getElementById("restartBtn").style.display = "block";
+  } else {
+    document.getElementById("restartBtn").style.display = "none";
   }
-}
+  ;
+  }
 
 // Restart game
 function restartGame() {
@@ -131,4 +137,20 @@ update();
 monyet.width = 40;
 monyet.height = 40;
 
+
+document.getElementById("jumpBtn").addEventListener("click", function () {
+    if (!monyet.isJumping && !gameOver) {
+      monyet.velocityY = monyet.jumpPower;
+      monyet.isJumping = true;
+    }
+  });
+  
+  document.getElementById("restartBtn").addEventListener("click", function () {
+    restartGame();
+  });
+
+document.addEventListener
+
+
+  
 
