@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #87CEEB; /* biru langit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas {
+  border: 2px solid #333;
+  background: linear-gradient(#87CEEB 70%, #228B22 30%); /* biru + hijau tanah */
+}
+
